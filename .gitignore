@@ -5,3 +5,5 @@ package-lock.json
 Thumbs.db
 _*.mjs
 _o*.png
+
+gcm-diagnose.log
