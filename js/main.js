@@ -3,12 +3,37 @@
    ============================================================= */
 
 /* --- Config del RSVP: elegí dónde llegan las confirmaciones -----------------
-   provider: "netlify"  -> usa Netlify Forms (no hay que tocar nada más).
-   provider: "formspree"-> pegá tu ID de Formspree en formspreeId (para GitHub Pages).
+   provider: "google"   -> manda las respuestas a un Formulario de Google (Sheets). ACTIVO.
+   provider: "netlify"  -> usa Netlify Forms.
+   provider: "formspree"-> pegá tu ID de Formspree en formspreeId.
 --------------------------------------------------------------------------- */
 var RSVP_CONFIG = {
-  provider: "netlify",
+  provider: "google",
   formspreeId: "TU_ID_DE_FORMSPREE"
+};
+
+/* Mapeo de campos del sitio -> "entry.NNN" de cada Formulario de Google.
+   Los valores de las opciones múltiples tienen que coincidir EXACTO con las del Form. */
+var GFORM = {
+  rsvp: {
+    action: "https://docs.google.com/forms/d/e/1FAIpQLSd6JwX6CZ2YGOctxNQLZRqUmHjnWI9DNUzXQ_R7LGXws7VD8g/formResponse",
+    map: {
+      nombre:                  { entry: "entry.1571085819" },
+      asiste:                  { entry: "entry.1639188789", values: { "Sí": "Confirmo asistencia", "No": "No asistiré" } },
+      restriccion_alimentaria: { entry: "entry.1053175909" },
+      transporte:              { entry: "entry.1535647948", values: { "Sí": "SI", "No": "No" } },
+      telefono:                { entry: "entry.553841696" },
+      mensaje:                 { entry: "entry.859049078" }
+    }
+  },
+  cancion: {
+    action: "https://docs.google.com/forms/d/e/1FAIpQLSc7qqApZC4yqiguK0O37PrNkHUQ89cMlrjMvM9om0ZfTHQCfg/formResponse",
+    map: {
+      cancion: { entry: "entry.1299035906" },
+      artista: { entry: "entry.841241203" },
+      de:      { entry: "entry.473729982" }
+    }
+  }
 };
 
 (function () {
@@ -16,6 +41,28 @@ var RSVP_CONFIG = {
 
   var prefersReduced = window.matchMedia &&
     window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Envía un FormData a un Formulario de Google (modo no-cors: la respuesta es
+     opaca, no se puede leer el status, así que "resuelve" = enviado). */
+  function postToGoogleForm(cfg, fd) {
+    var params = new URLSearchParams();
+    Object.keys(cfg.map).forEach(function (field) {
+      if (!fd.has(field)) return;
+      var raw = (fd.get(field) || "").toString().trim();
+      if (!raw) return;
+      var m = cfg.map[field];
+      var value = (m.values && m.values[raw] != null) ? m.values[raw] : raw;
+      params.append(m.entry, value);
+    });
+    params.append("fvv", "1");
+    params.append("pageHistory", "0");
+    return fetch(cfg.action, {
+      method: "POST",
+      mode: "no-cors",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: params.toString()
+    });
+  }
 
   // Escalonado del hero al cargar
   function revealHero() {
@@ -424,6 +471,19 @@ var RSVP_CONFIG = {
         fd.delete("telefono");
       }
 
+      if (RSVP_CONFIG.provider === "google") {
+        postToGoogleForm(GFORM.rsvp, fd).then(function () {
+          rsvpForm.hidden = true;
+          doneEl.hidden = false;
+        }).catch(function () {
+          errEl.textContent = "No pudimos registrar tu confirmación. Probá de nuevo en un ratito.";
+          errEl.hidden = false;
+          btnSend.disabled = false;
+          btnSend.textContent = "Enviar";
+        });
+        return;
+      }
+
       var url, opts;
       if (RSVP_CONFIG.provider === "formspree") {
         url = "https://formspree.io/f/" + RSVP_CONFIG.formspreeId;
@@ -483,6 +543,20 @@ var RSVP_CONFIG = {
       songBtn.textContent = "Enviando…";
 
       var fd = new FormData(songForm);
+
+      if (RSVP_CONFIG.provider === "google") {
+        postToGoogleForm(GFORM.cancion, fd).then(function () {
+          songForm.hidden = true;
+          songDone.hidden = false;
+        }).catch(function () {
+          songErr.textContent = "No pudimos enviar la sugerencia. Probá de nuevo en un ratito.";
+          songErr.hidden = false;
+          songBtn.disabled = false;
+          songBtn.textContent = "Enviar sugerencia";
+        });
+        return;
+      }
+
       var url, opts;
       if (RSVP_CONFIG.provider === "formspree") {
         url = "https://formspree.io/f/" + RSVP_CONFIG.formspreeId;
