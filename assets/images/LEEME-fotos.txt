@@ -1,0 +1,56 @@
+CÓMO CARGAR TUS FOTOS
+=====================
+
+Colocá los archivos con EXACTAMENTE estos nombres dentro de esta carpeta
+(assets/images/). El sitio ya los busca por nombre, no hay que tocar código
+salvo que quieras cambiar el orden.
+
+IMPORTANTE: las fotos que mandás por el chat NO entran solas al proyecto.
+Guardá los archivos en ESTA carpeta:
+
+  C:\Users\menen\Desktop\Juan\Claude\Proyecto redes\ournextchapter24.10\assets\images\
+
+GALERÍA (carrusel estilo polaroid):
+  couple-01.jpg ... couple-09.jpg   ·  ya optimizadas (JPG ~1600px, 170-370 KB c/u)
+  dogs-01.jpg ... dogs-04.jpg        ·  FALTAN CARGAR — las 4 fotos con los perros.
+                                       Guardalas en esta carpeta con EXACTAMENTE esos
+                                       nombres (dogs-01.jpg, dogs-02.jpg, dogs-03.jpg,
+                                       dogs-04.jpg). Ojo con Windows: si tenés las
+                                       extensiones ocultas te van a quedar como
+                                       "dogs-01.jpg.jpg" — renombralas o avisame.
+                                       Cuando estén, las optimizo yo (ahora pesan varios MB).
+  El carrusel las recorta a formato 4:5 y ya están intercaladas con las de la pareja.
+  Para cambiar/agregar una: reemplazá el archivo por otro con el mismo nombre
+  (idealmente < 400 KB) y, si sumás más, agregá su <figure class="polaroid"> en index.html.
+
+FOTO DE LA PORTADA (hero, a pantalla completa detrás de los nombres):
+  hero-bg.jpg     ·  ~2400 x 1600 px  ·  HORIZONTAL y con "aire" arriba/al centro para el texto
+                     La portada le pone un velo verde suave encima y el texto va en blanco.
+                     De las que mandaste, la que mejor funciona es la de Río de Janeiro
+                     (panorámica, con cielo arriba). La del telón de flecos también sirve.
+                     Si no cargás ninguna, la portada queda con un degradé de verdes (se ve bien).
+
+RAMOS FLORALES DE LAS ESQUINAS  (opcional — solo si querés el look "acuarela")
+  floral-corner-tl.png  ·  ~1000 px lado  ·  PNG con fondo transparente  ·  esquina sup. izq.
+  floral-corner-br.png  ·  ~1000 px lado  ·  PNG con fondo transparente  ·  esquina inf. der.
+  Por defecto se dibujan unas ramas de olivo en SVG (no hace falta cargar nada).
+  Si cargás estos PNG, descomentá el bloque ".hero__floral" marcado en css/styles.css.
+
+ILUSTRACIÓN DEL CÓDIGO DE VESTIMENTA
+  pareja-dresscode.png  ·  la pareja de negro que va en el modal de "Código de vestimenta"
+  (ya está cargada, con el fondo recortado a transparente)
+
+MÚSICA DE FONDO  ·  "Iris" — The Goo Goo Dolls
+  ../audio/song.mp3     ·  el botón ♪ de la portada la reproduce/pausa
+  Creá la carpeta assets/audio/ y poné ahí el archivo con el nombre song.mp3.
+  Nota: el archivo lo tenés que conseguir vos (es una canción con derechos, no la
+  puedo incluir yo en el proyecto).
+
+FONDO DEL CIERRE (parte inferior, desenfocado):
+  closing-bg.jpg  ·  ~2000 x 1400 px  ·  horizontal, poco contraste
+
+PREVIEW PARA WHATSAPP (Open Graph):
+  og-preview.jpg  ·  1200 x 630 px exactos  ·  con los nombres y la fecha
+
+Formato recomendado: JPG calidad 80, o WEBP.
+Peso ideal por foto: < 300 KB. Herramienta rápida: https://squoosh.app

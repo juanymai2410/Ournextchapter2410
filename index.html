@@ -1,0 +1,827 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- ====== SEO / META BÁSICAS ====== -->
+  <title>Juan &amp; Mai · Nos casamos · 24.10.2026</title>
+  <meta name="description" content="Juan y Mai nos casamos el 24 de octubre de 2026 en Los Cardales, Buenos Aires. Mirá los detalles y confirmá tu asistencia." />
+  <!-- Sitio privado: no aparece en buscadores (solo quien tiene el link) -->
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="theme-color" content="#3B4A3A" />
+  <link rel="canonical" href="https://ournextchapter24-10.example/" />
+
+  <!-- Open Graph (WhatsApp / Facebook) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Juan &amp; Mai · Nos casamos · 24.10.2026" />
+  <meta property="og:description" content="24 de octubre de 2026 · Los Cardales, Buenos Aires. Mirá los detalles y confirmá tu asistencia." />
+  <meta property="og:image" content="assets/images/og-preview.jpg" />
+  <meta property="og:image:alt" content="Juan & Mai — 24 de octubre de 2026" />
+  <meta property="og:locale" content="es_AR" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juan &amp; Mai · Nos casamos · 24.10.2026" />
+  <meta name="twitter:description" content="24 de octubre de 2026 · Los Cardales, Buenos Aires." />
+  <meta name="twitter:image" content="assets/images/og-preview.jpg" />
+
+  <!-- ====== FUENTES ====== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Parisienne&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <noscript><style>.intro{display:none!important}body{overflow:auto!important}</style></noscript>
+</head>
+<body class="intro-open">
+
+  <!-- ============================================================
+       0 · PORTAL DE ENTRADA  (¿entrar con música?)
+       ============================================================ -->
+  <div class="intro" id="intro">
+    <div class="intro__inner">
+      <p class="intro__date">24.10.2026</p>
+      <h1 class="intro__names">Juan <span>&amp;</span> Mai</h1>
+      <p class="intro__prompt">¿Querés entrar con música?</p>
+      <div class="intro__actions">
+        <button class="intro__btn intro__btn--yes" type="button" data-intro="yes">Sí</button>
+        <button class="intro__btn intro__btn--no" type="button" data-intro="no">No</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botón flotante de música — "Iris" (The Goo Goo Dolls). Fijo, acompaña el scroll. -->
+  <button class="music-toggle" type="button"
+          aria-label="Reproducir o pausar la música: Iris — The Goo Goo Dolls"
+          title="Iris — The Goo Goo Dolls" aria-pressed="false">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-music" /></svg>
+  </button>
+
+  <!-- ============================================================
+       1 · HERO / PORTADA
+       ============================================================ -->
+  <header class="hero" id="inicio">
+
+    <!-- Foto a pantalla completa — reemplazar por assets/images/hero-bg.jpg (ver LEEME-fotos.txt) -->
+    <div class="hero__bg" aria-hidden="true"></div>
+    <div class="hero__scrim" aria-hidden="true"></div>
+
+    <!-- Ramos florales en las esquinas (SVG por defecto; ver LEEME-fotos.txt para usar PNG acuarela) -->
+    <svg class="hero__floral hero__floral--tl" data-parallax="-0.04" viewBox="0 0 340 340" aria-hidden="true">
+      <use href="#floral-cluster" />
+    </svg>
+    <svg class="hero__floral hero__floral--br" data-parallax="0.04" viewBox="0 0 340 340" aria-hidden="true">
+      <use href="#floral-cluster" />
+    </svg>
+
+    <div class="hero__inner">
+
+      <p class="hero__date reveal" data-reveal-delay="1">24.10.2026</p>
+
+      <h1 class="hero__names reveal" data-reveal-delay="2">
+        <span>Juan</span>
+        <span class="hero__amp">&amp;</span>
+        <span>Mai</span>
+      </h1>
+
+      <span class="hero__rule reveal" data-reveal-delay="3" aria-hidden="true"></span>
+
+      <blockquote class="hero__quote reveal" data-reveal-delay="4">
+        <p>&ldquo;Hay días que se esperan toda una vida, y no imaginamos vivir el nuestro de otra manera que rodeados de quienes forman parte de nuestra historia.&rdquo;</p>
+      </blockquote>
+    </div>
+
+    <a class="hero__scroll reveal" data-reveal-delay="5" href="#cuenta-regresiva" aria-label="Ver más">
+      <svg viewBox="0 0 28 16" aria-hidden="true"><path d="M3 3l11 10L25 3"/></svg>
+    </a>
+
+    <!-- Transición hacia la cuenta regresiva: el verde sube dentro de la foto en capas -->
+    <div class="hero__fade" aria-hidden="true">
+      <svg viewBox="0 0 1440 260" preserveAspectRatio="none">
+        <path class="f1" d="M0,260 V150 C300,190 520,110 760,150 C1000,190 1220,120 1440,160 V260 Z"/>
+        <path class="f2" d="M0,260 V186 C300,226 520,146 760,186 C1000,226 1220,156 1440,196 V260 Z"/>
+        <path class="f3" d="M0,260 V222 C300,258 520,182 760,220 C1000,258 1220,192 1440,228 V260 Z"/>
+      </svg>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============================================================
+         CUENTA REGRESIVA
+         ============================================================ -->
+    <section class="countdown flow-top" id="cuenta-regresiva" aria-label="Cuenta regresiva"
+             style="--flow-from: var(--g-300)">
+      <div class="countdown__frame reveal" data-dir="scale">
+        <svg class="countdown__wreath" viewBox="0 0 400 400" aria-hidden="true"><use href="#countdown-wreath" /></svg>
+        <div class="countdown__card" data-stagger>
+          <p class="countdown__label reveal">Falta</p>
+          <span class="countdown__orn reveal" aria-hidden="true"></span>
+          <div class="countdown__grid reveal" data-target="2026-10-24T16:00:00-03:00">
+            <div><span data-cd="days">--</span><small>días</small></div>
+            <div><span data-cd="hours">--</span><small>hs</small></div>
+            <div><span data-cd="mins">--</span><small>min</small></div>
+            <div><span data-cd="secs">--</span><small>seg</small></div>
+          </div>
+          <svg class="countdown__heart reveal" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 21C-6 9 6 0 12 7 18 0 30 9 12 21Z"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         2 · CUÁNDO Y DÓNDE   (tarjeta + modal con mapa)
+         ============================================================ -->
+    <section class="section section--alt flow-top" id="cuando-donde" aria-labelledby="cuando-donde-title"
+             data-stagger style="--flow-from: var(--c-cream)">
+      <svg class="section__sprig section__sprig--tr" data-parallax="0.045" viewBox="0 0 210 180" aria-hidden="true"><use href="#bouquet-a" /></svg>
+      <h2 id="cuando-donde-title" class="section__title reveal">Cuándo y dónde</h2>
+
+      <div class="event-card reveal" data-dir="scale">
+        <p class="event-card__date">Sábado 24 de octubre de 2026</p>
+        <p class="event-card__time">16:00 h</p>
+        <p class="event-card__place">Los Cardales · Provincia de Buenos Aires</p>
+      </div>
+
+      <button class="btn-more reveal" type="button" data-modal="modal-lugar">Cómo llegar</button>
+    </section>
+
+    <!-- ============================================================
+         3 · CÓDIGO DE VESTIMENTA   (tarjeta + modal)
+         ============================================================ -->
+    <section class="section flow-top" id="vestimenta" aria-labelledby="vestimenta-title"
+             data-stagger style="--flow-from: var(--g-100)">
+      <svg class="section__sprig section__sprig--tl" data-parallax="-0.045" viewBox="0 0 210 180" aria-hidden="true"><use href="#bouquet-b" /></svg>
+      <h2 id="vestimenta-title" class="section__title reveal">Código de vestimenta</h2>
+      <svg class="section__icon reveal" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-bowtie" /></svg>
+      <button class="btn-more reveal" type="button" data-modal="modal-vestimenta">Ver más</button>
+    </section>
+
+    <!-- ============================================================
+         4 · GALERÍA   (carrusel estilo polaroid)
+         Las fotos van en assets/images/  (couple-01.jpg … couple-09.jpg + dogs-01.jpg … dogs-04.jpg, intercaladas)
+         ============================================================ -->
+    <section class="gallery-section gallery-section--alt flow-top" id="galeria" aria-labelledby="galeria-title"
+             style="--flow-from: var(--c-cream)">
+      <div class="gallery-section__head" data-stagger>
+        <h2 id="galeria-title" class="section__title reveal">Nuestras fotos</h2>
+        <p class="section__lead reveal">Un poco de nuestra historia.</p>
+        <svg class="section__icon reveal" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-camera" /></svg>
+      </div>
+
+      <div class="gallery">
+        <button class="gallery__nav gallery__nav--prev" type="button" aria-label="Foto anterior">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+        </button>
+
+        <div class="gallery__track">
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-01.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-01.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-02.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-02.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-03.jpg" alt="Juan y Mai brindando con vino" loading="lazy"><span class="polaroid__ph">couple-03.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/dogs-01.jpg" alt="Juan y Mai con sus perros" loading="lazy"><span class="polaroid__ph">dogs-01.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-04.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-04.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/dogs-02.jpg" alt="Juan y Mai con sus perros" loading="lazy"><span class="polaroid__ph">dogs-02.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-05.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-05.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-06.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-06.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/dogs-03.jpg" alt="Juan y Mai con sus perros" loading="lazy"><span class="polaroid__ph">dogs-03.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-08.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-08.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/couple-09.jpg" alt="Juan y Mai" loading="lazy"><span class="polaroid__ph">couple-09.jpg</span></div></figure>
+          <figure class="polaroid"><div class="polaroid__img"><img src="assets/images/dogs-04.jpg" alt="Juan y Mai con sus perros" loading="lazy"><span class="polaroid__ph">dogs-04.jpg</span></div></figure>
+        </div>
+
+        <button class="gallery__nav gallery__nav--next" type="button" aria-label="Foto siguiente">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+        </button>
+
+        <div class="gallery__dots" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         5 · MÚSICA   (tarjeta + modal para sugerir canciones)
+         ============================================================ -->
+    <section class="section flow-top" id="musica" aria-labelledby="musica-title"
+             data-stagger style="--flow-from: var(--g-100)">
+      <svg class="section__sprig section__sprig--tr" data-parallax="0.045" viewBox="0 0 210 180" aria-hidden="true"><use href="#bouquet-c" /></svg>
+      <h2 id="musica-title" class="section__title reveal">Música</h2>
+      <p class="section__lead reveal">¿Cuál es el tema que no puede faltar en la pista? Sugerinos tu canción.</p>
+      <svg class="section__icon reveal" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-music-notes" /></svg>
+      <button class="btn-more reveal" type="button" data-modal="modal-musica">Sugerir canción</button>
+    </section>
+
+    <!-- ============================================================
+         6 · MESA DE REGALOS   (tarjeta -> modal con los datos)
+         ============================================================ -->
+    <section class="section section--alt flow-top" id="regalos" aria-labelledby="regalos-title"
+             data-stagger style="--flow-from: var(--c-cream)">
+      <svg class="section__sprig section__sprig--tl" data-parallax="-0.045" viewBox="0 0 210 180" aria-hidden="true"><use href="#bouquet-a" /></svg>
+      <h2 id="regalos-title" class="section__title reveal">Regalos</h2>
+      <p class="section__lead reveal">Tu presencia es nuestro mejor regalo. Si además querés colaborar con nuestra luna de miel, acá están los datos.</p>
+      <svg class="section__icon reveal" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-gift" /></svg>
+      <button class="btn-more reveal" type="button" data-modal="modal-regalos">Ver datos</button>
+    </section>
+
+    <!-- ============================================================
+         6 · RSVP   (tarjeta + modal con formulario progresivo)
+         ============================================================ -->
+    <section class="section flow-top" id="rsvp" aria-labelledby="rsvp-title"
+             data-stagger style="--flow-from: var(--g-100)">
+      <svg class="section__sprig section__sprig--tr" data-parallax="0.045" viewBox="0 0 210 180" aria-hidden="true"><use href="#bouquet-b" /></svg>
+      <h2 id="rsvp-title" class="section__title reveal">Confirmá tu asistencia</h2>
+      <p class="section__lead reveal"><strong>Confirmá antes del viernes 9 de octubre de 2026.</strong><br>Ayudanos a organizar todo.</p>
+      <svg class="section__icon reveal" viewBox="0 0 48 48" aria-hidden="true"><use href="#icon-mail" /></svg>
+      <button class="btn-more reveal" type="button" data-modal="modal-rsvp">Confirmar asistencia</button>
+    </section>
+  </main>
+
+  <!-- ============================================================
+       CIERRE — foto de fondo desenfocada
+       ============================================================ -->
+  <footer class="closing flow-top" id="cierre" style="--flow-from: var(--c-cream)">
+    <div class="closing__overlay">
+      <p class="closing__names">Juan &amp; Mai</p>
+      <p class="closing__tag">ournextchapter24.10</p>
+      <a class="closing__ig"
+         href="https://www.instagram.com/ournextchapter24.10?stkn=MW5kYnZ2NWZyNjFkZQ%3D%3D&amp;utm_source=qr"
+         target="_blank" rel="noopener" aria-label="Instagram de Juan y Mai">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><use href="#icon-instagram" /></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       MODALES  (mismo formato para todas las secciones con "ver más").
+       Los adornos (florales + marco dorado) los inyecta main.js en cada .modal__dialog.
+       ============================================================ -->
+
+  <div class="modal" id="modal-rsvp" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-rsvp-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-mail" /></svg>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__title" id="modal-rsvp-title">Confirmar asistencia</h3>
+
+        <form class="rsvp" name="rsvp" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="rsvp" />
+          <p class="rsvp__hp" hidden><label>No completar: <input name="bot-field" /></label></p>
+
+          <!-- Paso 1 · nombre -->
+          <div class="rsvp__step" data-step="nombre">
+            <p class="rsvp__q">Nombre y apellido <span class="rsvp__req" aria-hidden="true">*</span></p>
+            <input class="rsvp__input" id="rsvp-nombre" name="nombre" type="text" autocomplete="name" placeholder="Escribí tu nombre y apellido" />
+          </div>
+
+          <!-- Paso 2 · asistencia -->
+          <div class="rsvp__step" data-step="asiste" hidden>
+            <p class="rsvp__q">¿Asistes a la ceremonia? <span class="rsvp__req" aria-hidden="true">*</span></p>
+            <div class="rsvp__opts">
+              <label class="rsvp__opt"><input type="radio" name="asiste" value="Sí" /><span>Confirmo asistencia</span></label>
+              <label class="rsvp__opt"><input type="radio" name="asiste" value="No" /><span>No asistiré</span></label>
+            </div>
+          </div>
+
+          <!-- Paso · restricciones (solo si asiste) -->
+          <div class="rsvp__step" data-step="restriccion" hidden>
+            <p class="rsvp__q">Restricciones alimentarias</p>
+            <textarea class="rsvp__input" name="restriccion_alimentaria" rows="3" placeholder="Escribí acá…"></textarea>
+            <p class="rsvp__help">Indicanos si necesitás algún menú especial: celíaco, vegano, vegetariano, etc.</p>
+          </div>
+
+          <!-- Paso · transporte (solo si asiste) -->
+          <div class="rsvp__step" data-step="transporte" hidden>
+            <p class="rsvp__q">¿Querés contar con traslado desde Zárate? <span class="rsvp__req" aria-hidden="true">*</span></p>
+            <div class="rsvp__opts">
+              <label class="rsvp__opt"><input type="radio" name="transporte" value="Sí" /><span>Sí</span></label>
+              <label class="rsvp__opt"><input type="radio" name="transporte" value="No" /><span>No</span></label>
+            </div>
+            <p class="rsvp__help" data-transp-note hidden>¡Genial! Nos vamos a comunicar con vos para coordinar el traslado.</p>
+          </div>
+
+          <!-- Paso · teléfono (solo si asiste) -->
+          <div class="rsvp__step" data-step="telefono" hidden>
+            <p class="rsvp__q">Teléfono de contacto <span class="rsvp__req" aria-hidden="true">*</span></p>
+            <input class="rsvp__input" id="rsvp-tel" name="telefono" type="tel" inputmode="tel" autocomplete="tel" placeholder="Ej: 11 5555 5555" />
+            <p class="rsvp__help">Lo usamos solo para coordinar detalles del día.</p>
+          </div>
+
+          <!-- Paso · mensaje (para ambos caminos; el texto se adapta) -->
+          <div class="rsvp__step" data-step="mensaje" hidden>
+            <p class="rsvp__q" data-msg-q>Mensaje para los novios</p>
+            <textarea class="rsvp__input" name="mensaje" rows="4" placeholder="Dejanos unas palabras…"></textarea>
+            <p class="rsvp__help" data-msg-help>Podés dejar un mensaje de cariño a los novios.</p>
+          </div>
+
+          <p class="rsvp__error" role="alert" hidden></p>
+
+          <div class="rsvp__nav">
+            <button type="button" class="rsvp__btn rsvp__btn--ghost" data-prev>&larr; Anterior</button>
+            <button type="button" class="rsvp__btn rsvp__btn--next" data-next>Siguiente &rarr;</button>
+            <button type="submit" class="rsvp__btn rsvp__btn--send" data-send hidden>Enviar</button>
+          </div>
+        </form>
+
+        <div class="rsvp__done" hidden>
+          <p class="rsvp__done-title">¡Gracias!</p>
+          <p class="rsvp__done-text">Tu confirmación ha sido registrada correctamente.</p>
+          <button type="button" class="rsvp__btn rsvp__btn--next" data-again>Confirmar otro invitado</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-regalos" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-regalos-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-gift" /></svg>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__title" id="modal-regalos-title">Regalos</h3>
+        <p class="modal__intro">Si querés hacernos un regalo en dinero, podés transferir a cualquiera de estas cuentas.</p>
+
+        <div class="gift">
+          <p class="gift__name">Cuenta en pesos</p>
+          <dl class="gift__list">
+            <div class="gift__row">
+              <div><dt>Titular</dt><dd>Juan Cruz Menéndez</dd></div>
+            </div>
+            <div class="gift__row">
+              <div><dt>CBU</dt><dd data-copy>1430001713002695960018</dd></div>
+              <button class="copy" type="button" data-copy-btn aria-label="Copiar CBU">Copiar</button>
+            </div>
+            <div class="gift__row">
+              <div><dt>Alias</dt><dd data-copy>JUAN.CRUZ.MENENDEZ</dd></div>
+              <button class="copy" type="button" data-copy-btn aria-label="Copiar alias">Copiar</button>
+            </div>
+          </dl>
+        </div>
+
+        <div class="gift">
+          <p class="gift__name">Cuenta en dólares</p>
+          <dl class="gift__list">
+            <div class="gift__row">
+              <div><dt>Titular</dt><dd>Juan Cruz Menéndez</dd></div>
+            </div>
+            <div class="gift__row">
+              <div><dt>CBU</dt><dd data-copy>1430001714002695960026</dd></div>
+              <button class="copy" type="button" data-copy-btn aria-label="Copiar CBU">Copiar</button>
+            </div>
+            <div class="gift__row">
+              <div><dt>Alias</dt><dd data-copy>juancruzmenendezusd</dd></div>
+              <button class="copy" type="button" data-copy-btn aria-label="Copiar alias">Copiar</button>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-vestimenta" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-vestimenta-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-bowtie" /></svg>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__title" id="modal-vestimenta-title">Código de vestimenta</h3>
+        <p class="dress__level">Elegante</p>
+
+        <img class="dress__couple" src="assets/images/pareja-dresscode.png" alt="Ilustración de una pareja con vestimenta elegante" loading="lazy" width="203" height="241" />
+
+        <div class="dress__notes">
+          <p class="dress__note">Por favor, evitá prendas en <strong>color blanco</strong> y <strong>tonos similares</strong>, reservados para la novia.</p>
+          <p class="dress__note"><strong>La ceremonia es en el jardín.</strong> Recomendamos evitar tacos finos, así se mueven cómodas toda la noche.</p>
+        </div>
+
+        <p class="dress__close">Ahora sí… a definir el outfit ✨</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-musica" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-musica-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-music-notes" /></svg>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__title" id="modal-musica-title">Sugerí una canción</h3>
+        <p class="modal__intro">La que no puede faltar en la fiesta.</p>
+
+        <form class="song" name="cancion" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="cancion" />
+          <input type="hidden" name="tipo" value="Sugerencia de canción" />
+          <p class="rsvp__hp" hidden><label>No completar: <input name="bot-field" /></label></p>
+
+          <label class="rsvp__label" for="song-tema">Canción <span class="rsvp__req" aria-hidden="true">*</span></label>
+          <input class="rsvp__input" id="song-tema" name="cancion" type="text" placeholder="Nombre del tema" />
+
+          <label class="rsvp__label" for="song-artista">Artista</label>
+          <input class="rsvp__input" id="song-artista" name="artista" type="text" placeholder="Quién la canta" />
+
+          <label class="rsvp__label" for="song-de">Tu nombre <span class="rsvp__opt-tag">(opcional)</span></label>
+          <input class="rsvp__input" id="song-de" name="de" type="text" autocomplete="name" placeholder="Para saber quién la pidió" />
+
+          <p class="rsvp__error" role="alert" hidden></p>
+
+          <button type="submit" class="rsvp__btn rsvp__btn--send song__send">Enviar sugerencia</button>
+        </form>
+
+        <div class="song__done" hidden>
+          <p class="rsvp__done-title">¡Anotada!</p>
+          <p class="rsvp__done-text">Gracias por la data. Ya va a sonar 🎶</p>
+          <button type="button" class="rsvp__btn rsvp__btn--next" data-song-again>Sugerir otra</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-lugar" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-lugar-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__badge" aria-hidden="true">
+        <svg viewBox="0 0 48 48"><use href="#icon-pin" /></svg>
+      </div>
+      <div class="modal__body">
+        <h3 class="modal__title" id="modal-lugar-title">Cómo llegar</h3>
+        <p class="modal__intro">La ceremonia y la fiesta son en el mismo lugar. La ceremonia se realiza en el jardín.</p>
+
+        <p class="place-addr">Av. Pavón 655<br>B2814 Los Cardales<br>Provincia de Buenos Aires</p>
+
+        <div class="map-embed">
+          <iframe title="Mapa de Los Cardales" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                  src="https://www.google.com/maps?q=Av.%20Pav%C3%B3n%20655%2C%20Los%20Cardales%2C%20Buenos%20Aires&output=embed"></iframe>
+        </div>
+
+        <a class="btn-more btn-more--solid"
+           href="https://www.google.com/maps/search/?api=1&query=Av.%20Pav%C3%B3n%20655%2C%20B2814%20Los%20Cardales%2C%20Provincia%20de%20Buenos%20Aires"
+           target="_blank" rel="noopener">Abrir en Google Maps</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== SPRITE SVG (motivos de olivo, reutilizables) ====== -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+
+      <!-- Ícono ubicación -->
+      <g id="icon-pin" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M24 5c-7.7 0-14 6-14 13.6 0 9.7 14 24.4 14 24.4s14-14.7 14-24.4C38 11 31.7 5 24 5Z"/>
+        <circle cx="24" cy="18.5" r="5"/>
+      </g>
+
+      <!-- Ícono cámara -->
+      <g id="icon-camera" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 16h5l3-4h10l3 4h5a2 2 0 0 1 2 2v18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2Z"/>
+        <circle cx="24" cy="27" r="7"/>
+      </g>
+
+      <!-- Ícono notas musicales -->
+      <g id="icon-music-notes" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 33V13l20-4v20"/>
+        <circle cx="14" cy="33" r="5"/>
+        <circle cx="34" cy="29" r="5"/>
+      </g>
+
+      <!-- Ícono Instagram -->
+      <g id="icon-instagram" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="3" width="18" height="18" rx="5"/>
+        <circle cx="12" cy="12" r="4.2"/>
+        <circle cx="17" cy="7" r="1.1" fill="currentColor" stroke="none"/>
+      </g>
+
+      <!-- Rama de olivo delicada para los laterales de las secciones (caja 120 x 200) -->
+      <g id="sprig-fine">
+        <path d="M60 197 C 46 150 70 104 56 58 C 48 32 62 16 60 3"
+              fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        <use href="#olv-leaf" transform="translate(53 178) rotate(-53) scale(.84)"/>
+        <use href="#olv-leaf" transform="translate(57 173) rotate(49) scale(.8)"/>
+        <use href="#olv-leaf" transform="translate(52 153) rotate(-55) scale(.78)"/>
+        <use href="#olv-leaf" transform="translate(58 148) rotate(47) scale(.74)"/>
+        <use href="#olv-leaf" transform="translate(52 129) rotate(-51) scale(.7)"/>
+        <use href="#olv-leaf" transform="translate(57 124) rotate(50) scale(.66)"/>
+        <use href="#olv-leaf" transform="translate(53 105) rotate(-53) scale(.6)"/>
+        <use href="#olv-leaf" transform="translate(57 100) rotate(48) scale(.56)"/>
+        <use href="#olv-leaf" transform="translate(55 81) rotate(-48) scale(.5)"/>
+        <use href="#olv-leaf" transform="translate(58 76) rotate(50) scale(.46)"/>
+        <use href="#olv-leaf" transform="translate(57 55) rotate(-45) scale(.4)"/>
+        <use href="#olv-leaf" transform="translate(59 50) rotate(46) scale(.37)"/>
+        <use href="#olv-leaf" transform="translate(59 30) rotate(-28) scale(.32)"/>
+        <use href="#olv-leaf" transform="translate(60 20) rotate(-6) scale(.28)"/>
+        <g fill="currentColor" opacity=".5">
+          <ellipse cx="48" cy="184" rx="3.6" ry="4.8"/>
+          <ellipse cx="67" cy="161" rx="3.1" ry="4.1"/>
+        </g>
+      </g>
+
+      <!-- Ícono moño (dress code) -->
+      <g id="icon-bowtie" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M23 24 9 16v16l14-8Z"/>
+        <path d="M25 24l14-8v16l-14-8Z"/>
+        <rect x="21" y="21" width="6" height="6" rx="1.4"/>
+      </g>
+
+      <!-- Ícono corazón -->
+      <g id="icon-heart" fill="currentColor">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+      </g>
+
+      <!-- Ícono sobre (RSVP) -->
+      <g id="icon-mail" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="6" y="10" width="36" height="28" rx="3"/>
+        <path d="M7 13l17 13L41 13"/>
+      </g>
+
+      <!-- Ícono check -->
+      <g id="icon-check" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="24" cy="24" r="18"/>
+        <path d="M15 24.5l6.5 6.5L34 18"/>
+      </g>
+
+      <!-- Ícono regalo -->
+      <g id="icon-gift" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="9" y="22" width="30" height="19" rx="2"/>
+        <rect x="7" y="15" width="34" height="7" rx="1.5"/>
+        <path d="M24 15v26"/>
+        <circle cx="18.5" cy="10.5" r="4.5"/>
+        <circle cx="29.5" cy="10.5" r="4.5"/>
+        <path d="M23 15c-1-2.5-2.5-4-4.5-4M25 15c1-2.5 2.5-4 4.5-4"/>
+      </g>
+
+      <!-- Hoja de olivo: base en (0,0), punta hacia arriba (-y), leve curva -->
+      <g id="olv-leaf">
+        <path d="M0 0 C 6 -12 7.5 -30 2 -44 C -3.2 -30 -8 -14 -3 -3 C -2 -1 -1 0 0 0 Z" fill="currentColor"/>
+        <path d="M-0.6 -4 C 1 -18 2.2 -32 1.6 -42" fill="none" stroke="#ffffff" stroke-opacity="0.24" stroke-width="1"/>
+      </g>
+
+      <!-- Aceituna con reflejo -->
+      <g id="olv-olive">
+        <ellipse rx="6" ry="8" fill="currentColor"/>
+        <ellipse rx="6" ry="8" fill="#1b2913" fill-opacity="0.30"/>
+        <ellipse cx="-2" cy="-3" rx="1.7" ry="2.4" fill="#ffffff" fill-opacity="0.30"/>
+      </g>
+
+      <!-- Hoja apaisada: base en (0,0), apunta hacia +x -->
+      <g id="olv-leaf-h">
+        <path d="M0 0 C 12 -6 30 -7.5 46 -2 C 30 3.4 14 8 3 3 C 1 2 0 1 0 0 Z" fill="currentColor"/>
+        <path d="M4 0.4 C 18 -1.2 32 -2.4 43 -1.8" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1"/>
+      </g>
+
+      <!-- Ramita (tallo curvo con hojas y aceitunas), crece hacia +x -->
+      <g id="olv-stem">
+        <path d="M0 0 C 45 -4 95 -14 148 -24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <use href="#olv-leaf-h" transform="translate(12 -1) rotate(-42) scale(1.05)"/>
+        <use href="#olv-leaf-h" transform="translate(18 0) rotate(44) scale(1.00)"/>
+        <use href="#olv-leaf-h" transform="translate(38 -4) rotate(-38) scale(1.00)"/>
+        <use href="#olv-leaf-h" transform="translate(46 -3) rotate(42) scale(0.94)"/>
+        <use href="#olv-leaf-h" transform="translate(66 -9) rotate(-36) scale(0.88)"/>
+        <use href="#olv-leaf-h" transform="translate(74 -8) rotate(40) scale(0.82)"/>
+        <use href="#olv-leaf-h" transform="translate(94 -14) rotate(-33) scale(0.76)"/>
+        <use href="#olv-leaf-h" transform="translate(102 -13) rotate(37) scale(0.70)"/>
+        <use href="#olv-leaf-h" transform="translate(122 -19) rotate(-28) scale(0.60)"/>
+        <use href="#olv-leaf-h" transform="translate(148 -24) rotate(-6) scale(0.48)"/>
+        <use href="#olv-olive" transform="translate(28 3) scale(0.46)"/>
+        <use href="#olv-olive" transform="translate(56 0) scale(0.40)"/>
+      </g>
+
+      <!-- Ramo de esquina: varias ramitas en abanico, en varios tonos de verde + dorado -->
+      <g id="floral-cluster">
+        <g style="color:#3B4E40" opacity="0.9">
+          <use href="#olv-stem" transform="translate(16 20) rotate(10) scale(1.20)"/>
+          <use href="#olv-stem" transform="translate(20 16) rotate(82) scale(1.14)"/>
+        </g>
+        <g style="color:#63855F">
+          <use href="#olv-stem" transform="translate(14 22) rotate(46) scale(1.26)"/>
+          <use href="#olv-stem" transform="translate(24 20) rotate(2) scale(0.94)"/>
+        </g>
+        <g style="color:#86A47F">
+          <use href="#olv-stem" transform="translate(22 24) rotate(26) scale(1.04)"/>
+          <use href="#olv-stem" transform="translate(20 24) rotate(62) scale(1.02)"/>
+        </g>
+        <g style="color:#A9C09B" opacity="0.95">
+          <use href="#olv-stem" transform="translate(24 26) rotate(16) scale(0.82)"/>
+          <use href="#olv-stem" transform="translate(23 27) rotate(52) scale(0.8)"/>
+        </g>
+        <g style="color:#C6A24E" opacity="0.85">
+          <use href="#olv-stem" transform="translate(25 28) rotate(38) scale(0.6)"/>
+          <use href="#olv-stem" transform="translate(24 29) rotate(72) scale(0.52)"/>
+        </g>
+      </g>
+
+      <!-- Ramos de esquina para las secciones (caja ajustada 0 0 210 180, nacen del ángulo sup-izq) -->
+      <g id="bouquet-a">
+        <g style="color:#3B4E40" opacity=".9">
+          <use href="#olv-stem" transform="translate(8 16) rotate(9) scale(1.22)"/>
+          <use href="#olv-stem" transform="translate(12 10) rotate(46) scale(1.28)"/>
+          <use href="#olv-stem" transform="translate(6 20) rotate(80) scale(1.14)"/>
+        </g>
+        <g style="color:#63855F">
+          <use href="#olv-stem" transform="translate(11 14) rotate(25) scale(1.04)"/>
+          <use href="#olv-stem" transform="translate(11 14) rotate(62) scale(1.0)"/>
+          <use href="#olv-stem" transform="translate(9 12) rotate(2) scale(.9)"/>
+        </g>
+        <g style="color:#86A47F">
+          <use href="#olv-stem" transform="translate(13 16) rotate(15) scale(.82)"/>
+          <use href="#olv-stem" transform="translate(12 16) rotate(50) scale(.8)"/>
+        </g>
+        <g style="color:#A9C09B" opacity=".95">
+          <use href="#olv-stem" transform="translate(14 18) rotate(34) scale(.6)"/>
+        </g>
+        <g style="color:#C6A24E" opacity=".85">
+          <use href="#olv-stem" transform="translate(15 18) rotate(70) scale(.5)"/>
+          <use href="#olv-stem" transform="translate(16 19) rotate(21) scale(.42)"/>
+        </g>
+      </g>
+
+      <g id="bouquet-b">
+        <g style="color:#3B4E40" opacity=".88">
+          <use href="#olv-stem" transform="translate(8 18) rotate(16) scale(1.24)"/>
+          <use href="#olv-stem" transform="translate(11 12) rotate(60) scale(1.18)"/>
+        </g>
+        <g style="color:#63855F">
+          <use href="#olv-stem" transform="translate(11 15) rotate(36) scale(1.02)"/>
+          <use href="#olv-stem" transform="translate(9 15) rotate(82) scale(.94)"/>
+        </g>
+        <g style="color:#86A47F">
+          <use href="#olv-stem" transform="translate(13 17) rotate(5) scale(.84)"/>
+          <use href="#olv-stem" transform="translate(12 17) rotate(47) scale(.78)"/>
+        </g>
+        <g style="color:#C6A24E" opacity=".92">
+          <use href="#olv-stem" transform="translate(14 18) rotate(25) scale(.66)"/>
+          <use href="#olv-stem" transform="translate(15 19) rotate(66) scale(.52)"/>
+          <use href="#olv-stem" transform="translate(15 19) rotate(-4) scale(.4)"/>
+        </g>
+      </g>
+
+      <g id="bouquet-c">
+        <g style="color:#3B4E40" opacity=".9">
+          <use href="#olv-stem" transform="translate(6 15) rotate(22) scale(1.26)"/>
+        </g>
+        <g style="color:#63855F">
+          <use href="#olv-stem" transform="translate(10 11) rotate(44) scale(1.06)"/>
+          <use href="#olv-stem" transform="translate(8 17) rotate(5) scale(.9)"/>
+        </g>
+        <g style="color:#86A47F">
+          <use href="#olv-stem" transform="translate(11 14) rotate(64) scale(.78)"/>
+          <use href="#olv-stem" transform="translate(12 15) rotate(30) scale(.62)"/>
+        </g>
+        <g style="color:#C6A24E" opacity=".85">
+          <use href="#olv-stem" transform="translate(13 16) rotate(48) scale(.46)"/>
+        </g>
+      </g>
+
+      <!-- ===== Marco botánico de la cuenta regresiva (según referencia: pocos ramos, aireado) ===== -->
+      <!-- Hoja redondeada tipo eucalipto -->
+      <g id="euc-leaf"><ellipse cx="0" cy="-9" rx="6.6" ry="10.5" fill="currentColor"/></g>
+      <!-- Ramita de eucalipto (nace en su origen, fluye hacia +x) -->
+      <g id="euc-stem">
+        <path d="M0 0 C 32 -6 72 -11 120 -17" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        <use href="#euc-leaf" transform="translate(14 -2) rotate(-42) scale(.92)"/>
+        <use href="#euc-leaf" transform="translate(22 -3) rotate(40) scale(.86)"/>
+        <use href="#euc-leaf" transform="translate(44 -6) rotate(-38) scale(.8)"/>
+        <use href="#euc-leaf" transform="translate(52 -7) rotate(38) scale(.74)"/>
+        <use href="#euc-leaf" transform="translate(76 -11) rotate(-33) scale(.64)"/>
+        <use href="#euc-leaf" transform="translate(84 -12) rotate(33) scale(.58)"/>
+        <use href="#euc-leaf" transform="translate(106 -15) rotate(-26) scale(.46)"/>
+      </g>
+      <!-- Paniculata (baby's breath): racimo de flores blancas -->
+      <g id="cd-gyp">
+        <g fill="#FAF7EF" stroke="#D6CFB9" stroke-width=".55">
+          <circle cx="0" cy="0" r="3"/><circle cx="8" cy="-5" r="2.5"/><circle cx="-7" cy="-5.5" r="2.4"/>
+          <circle cx="5" cy="6.5" r="2.2"/><circle cx="-8" cy="3.5" r="2.1"/><circle cx="1" cy="-10.5" r="2"/>
+          <circle cx="12.5" cy="2.5" r="1.8"/><circle cx="-12.5" cy="-1" r="1.8"/><circle cx="-3" cy="9.5" r="1.7"/>
+        </g>
+      </g>
+
+      <!-- Ramos base (dibujados apuntando "arriba", luego se rotan a su lugar) -->
+      <g id="cd-cluster-lg">
+        <g style="color:#5C7358"><use href="#olv-stem" transform="translate(200 46) rotate(-6) scale(1.16)"/></g>
+        <g style="color:#8AA47F"><use href="#olv-stem" transform="translate(200 46) rotate(184) scale(1.0)"/></g>
+        <g style="color:#6E8C67"><use href="#euc-stem" transform="translate(200 42) rotate(12) scale(1.02)"/></g>
+        <g style="color:#9EB891"><use href="#euc-stem" transform="translate(200 42) rotate(196) scale(.86)"/></g>
+        <g style="color:#C6A24E" opacity=".5"><use href="#olv-stem" transform="translate(200 48) rotate(-2) scale(.36)"/></g>
+        <use href="#cd-gyp" transform="translate(176 30)"/>
+        <use href="#cd-gyp" transform="translate(216 24)"/>
+        <use href="#cd-gyp" transform="translate(198 44)"/>
+      </g>
+      <g id="cd-cluster-md">
+        <g style="color:#5C7358"><use href="#olv-stem" transform="translate(200 52) rotate(-3) scale(1.0)"/></g>
+        <g style="color:#9AB48D"><use href="#euc-stem" transform="translate(200 50) rotate(15) scale(.82)"/></g>
+        <use href="#cd-gyp" transform="translate(196 40)"/>
+      </g>
+      <g id="cd-cluster-sm">
+        <g style="color:#6E8C67"><use href="#olv-stem" transform="translate(200 56) rotate(5) scale(.8)"/></g>
+        <g style="color:#C6A24E" opacity=".78"><use href="#olv-stem" transform="translate(200 56) rotate(-13) scale(.46)"/></g>
+        <use href="#cd-gyp" transform="translate(199 48)"/>
+      </g>
+
+      <g id="countdown-wreath">
+        <!-- clusters laterales/inferiores: pocos, asimétricos, con aire entre ellos -->
+        <use href="#cd-cluster-md" transform="rotate(52 200 200)"/>
+        <use href="#cd-cluster-sm" transform="rotate(120 200 200)"/>
+        <use href="#cd-cluster-md" transform="rotate(146 200 200)"/>
+        <use href="#cd-cluster-md" transform="rotate(216 200 200)"/>
+        <use href="#cd-cluster-sm" transform="rotate(240 200 200)"/>
+        <use href="#cd-cluster-sm" transform="rotate(310 200 200)"/>
+        <!-- ramo superior (el más grande, va arriba de todo) -->
+        <use href="#cd-cluster-lg" transform="rotate(8 200 200)"/>
+        <!-- marco geométrico dorado, apenas irregular, por delante -->
+        <path transform="rotate(-5 200 200)" fill="none" stroke="#C6A24E" stroke-opacity="0.5" stroke-width="1.5"
+              d="M200 20 L326 76 L366 198 L322 334 L196 374 L60 328 L22 196 L76 60 Z"/>
+        <!-- paniculata suelta -->
+        <use href="#cd-gyp" transform="translate(330 262)"/>
+        <use href="#cd-gyp" transform="translate(74 150)"/>
+      </g>
+
+      <!-- Ícono de música -->
+      <g id="icon-music">
+        <path d="M9 18V6l10-2v12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="6" cy="18" r="3" fill="currentColor"/>
+        <circle cx="16" cy="16" r="3" fill="currentColor"/>
+      </g>
+
+      <!-- Hojita suelta para el separador (caja 26x26) -->
+      <g id="olive-leaf">
+        <g transform="translate(13 24) scale(0.5)">
+          <path d="M0 0 C 6 -12 7.5 -30 2 -44 C -3.2 -30 -8 -14 -3 -3 C -2 -1 -1 0 0 0 Z" fill="currentColor"/>
+        </g>
+      </g>
+
+      <!-- Ramita corta y arqueada para el encabezado (caja 220x70) -->
+      <g id="olive-sprig">
+        <path d="M18 42 C 72 29 148 29 202 42" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        <use href="#olv-leaf" transform="translate(44 37) rotate(-36) scale(0.50)"/>
+        <use href="#olv-leaf" transform="translate(70 32) rotate(-23) scale(0.58)"/>
+        <use href="#olv-leaf" transform="translate(98 30) rotate(-10) scale(0.63)"/>
+        <use href="#olv-leaf" transform="translate(122 30) rotate(10) scale(0.63)"/>
+        <use href="#olv-leaf" transform="translate(150 32) rotate(23) scale(0.58)"/>
+        <use href="#olv-leaf" transform="translate(176 37) rotate(36) scale(0.50)"/>
+        <use href="#olv-leaf" transform="translate(58 45) rotate(-158) scale(0.34)"/>
+        <use href="#olv-leaf" transform="translate(162 45) rotate(158) scale(0.34)"/>
+        <use href="#olv-olive" transform="translate(102 42) scale(0.34)"/>
+        <use href="#olv-olive" transform="translate(110 44) scale(0.36)"/>
+        <use href="#olv-olive" transform="translate(118 42) scale(0.34)"/>
+      </g>
+
+      <!-- Rama de olivo vertical para los laterales (caja 150x640) -->
+      <g id="olive-branch-v">
+        <path d="M78 636 C 62 548 96 470 78 388 C 64 320 92 244 76 168 C 66 118 80 70 74 16"
+              fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+
+        <!-- pares de hojas, de la base a la punta (escala decreciente).
+             Ángulo negativo = hoja hacia arriba-izquierda; positivo = arriba-derecha. -->
+        <use href="#olv-leaf" transform="translate(70 590) rotate(-58) scale(1.30)"/>
+        <use href="#olv-leaf" transform="translate(70 590) rotate(54) scale(1.30)"/>
+        <use href="#olv-leaf" transform="translate(84 548) rotate(-50) scale(1.26)"/>
+        <use href="#olv-leaf" transform="translate(84 548) rotate(60) scale(1.26)"/>
+        <use href="#olv-leaf" transform="translate(90 506) rotate(-56) scale(1.18)"/>
+        <use href="#olv-leaf" transform="translate(90 506) rotate(52) scale(1.18)"/>
+        <use href="#olv-leaf" transform="translate(84 464) rotate(-60) scale(1.12)"/>
+        <use href="#olv-leaf" transform="translate(84 464) rotate(48) scale(1.12)"/>
+        <use href="#olv-leaf" transform="translate(74 422) rotate(-48) scale(1.06)"/>
+        <use href="#olv-leaf" transform="translate(74 422) rotate(58) scale(1.06)"/>
+        <use href="#olv-leaf" transform="translate(66 380) rotate(-54) scale(1.00)"/>
+        <use href="#olv-leaf" transform="translate(66 380) rotate(52) scale(1.00)"/>
+        <use href="#olv-leaf" transform="translate(72 338) rotate(-58) scale(0.93)"/>
+        <use href="#olv-leaf" transform="translate(72 338) rotate(50) scale(0.93)"/>
+        <use href="#olv-leaf" transform="translate(84 296) rotate(-50) scale(0.86)"/>
+        <use href="#olv-leaf" transform="translate(84 296) rotate(58) scale(0.86)"/>
+        <use href="#olv-leaf" transform="translate(88 256) rotate(-56) scale(0.78)"/>
+        <use href="#olv-leaf" transform="translate(88 256) rotate(52) scale(0.78)"/>
+        <use href="#olv-leaf" transform="translate(80 218) rotate(-52) scale(0.70)"/>
+        <use href="#olv-leaf" transform="translate(80 218) rotate(54) scale(0.70)"/>
+        <use href="#olv-leaf" transform="translate(70 182) rotate(-56) scale(0.62)"/>
+        <use href="#olv-leaf" transform="translate(70 182) rotate(50) scale(0.62)"/>
+        <use href="#olv-leaf" transform="translate(66 146) rotate(-50) scale(0.55)"/>
+        <use href="#olv-leaf" transform="translate(66 146) rotate(56) scale(0.55)"/>
+        <use href="#olv-leaf" transform="translate(72 112) rotate(-54) scale(0.48)"/>
+        <use href="#olv-leaf" transform="translate(72 112) rotate(52) scale(0.48)"/>
+        <use href="#olv-leaf" transform="translate(74 80) rotate(-48) scale(0.42)"/>
+        <use href="#olv-leaf" transform="translate(74 80) rotate(50) scale(0.42)"/>
+        <use href="#olv-leaf" transform="translate(73 46) rotate(-4) scale(0.42)"/>
+
+        <!-- aceitunas -->
+        <use href="#olv-olive" transform="translate(66 574) rotate(-14) scale(0.90)"/>
+        <use href="#olv-olive" transform="translate(57 559) rotate(-22) scale(0.80)"/>
+        <use href="#olv-olive" transform="translate(92 470) rotate(14) scale(0.82)"/>
+        <use href="#olv-olive" transform="translate(63 372) rotate(-10) scale(0.68)"/>
+        <use href="#olv-olive" transform="translate(83 286) rotate(12) scale(0.58)"/>
+        <use href="#olv-olive" transform="translate(70 196) rotate(-8) scale(0.48)"/>
+      </g>
+    </defs>
+  </svg>
+
+  <!-- Música de fondo (opcional). Poné tu archivo en assets/audio/song.mp3 -->
+  <audio id="bg-music" loop preload="none" src="assets/audio/song.mp3"></audio>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

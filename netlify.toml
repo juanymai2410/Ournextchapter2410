@@ -1,0 +1,11 @@
+# Configuración para desplegar en Netlify.
+# Si finalmente usás GitHub Pages, este archivo simplemente se ignora.
+[build]
+  publish = "."
+  command = ""
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"

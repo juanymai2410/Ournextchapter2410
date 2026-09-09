@@ -1,0 +1,17 @@
+MÚSICA DE FONDO
+===============
+
+Canción elegida: "Iris" — The Goo Goo Dolls
+
+Poné el archivo acá, en esta carpeta (assets/audio/), con este nombre EXACTO:
+
+    song.mp3
+
+Formato: MP3 (audio). NO mp4 (eso es video).
+Si solo conseguís un mp4 o un video de YouTube, hay que extraerle el audio y
+guardarlo como .mp3 (cualquier conversor online sirve).
+
+Peso recomendado: menos de 4-5 MB (con 128 kbps alcanza y sobra para una web).
+
+Cuando el archivo esté acá, el botón ♪ de la portada lo reproduce y lo pausa.
+Mientras no esté, el botón no hace nada (no rompe la página).
