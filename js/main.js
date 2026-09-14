@@ -338,6 +338,24 @@ var GFORM = {
     });
   }
 
+  /* ---- Mosaico de fotos de los perros (cierre) ---- */
+  var collage = document.querySelector("[data-collage]");
+  if (collage) {
+    var collageImgs = ["dogs-01-sq.jpg", "dogs-02-sq.jpg", "dogs-03-sq.jpg", "dogs-04-sq.jpg"];
+    for (var mi = 1; mi <= 49; mi++) {
+      collageImgs.push("mosaic-" + (mi < 10 ? "0" + mi : mi) + "-sq.jpg");
+    }
+    var n = collageImgs.length; // 53, primo: un paso fijo lo recorre entero sin repetir de cerca
+    var step = 19;
+    var collageTotal = 160; // de sobra para cubrir cualquier ancho/alto de pantalla
+    var collageHtml = "";
+    for (var ci = 0; ci < collageTotal; ci++) {
+      var idx = (ci * step) % n;
+      collageHtml += '<img src="assets/images/' + collageImgs[idx] + '" alt="" loading="lazy" />';
+    }
+    collage.innerHTML = collageHtml;
+  }
+
   /* ---- Copiar al portapapeles ---- */
   document.addEventListener("click", function (e) {
     var btn = e.target.closest("[data-copy-btn]");
